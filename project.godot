@@ -11,6 +11,11 @@ config_version=5
 [application]
 
 config/name="C4K Jump and Run steps"
+config/tags=PackedStringArray("c4k")
 run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
