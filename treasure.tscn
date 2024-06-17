@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo72iap3q4uxq"]
+
+[ext_resource type="Texture2D" uid="uid://b2rf3s2retiwc" path="res://assets/backgrounds/sheet.png" id="1_db7kq"]
+[ext_resource type="Script" path="res://treasure.gd" id="1_vd8wf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a53li"]
+size = Vector2(12, 12)
+
+[node name="Treasure" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_vd8wf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_db7kq")
+region_enabled = true
+region_rect = Rect2(257.294, 67.0259, 13.1077, 12.5671)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_a53li")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
