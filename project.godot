@@ -16,6 +16,10 @@ run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[editor]
+
+movie_writer/movie_file="/home/tobias/godot/projects/c4k/jump_and_run_preview.avi"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
