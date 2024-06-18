@@ -15,3 +15,5 @@ func _on_pit_body_entered(_body):
 func _on_treasure_collected():
 	treasure_count += 1
 	$UI.increase_counter()
+	if treasure_count >= WINNING_TREASURE_COUNT:
+		$UI.display_win()

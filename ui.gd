@@ -18,3 +18,6 @@ func set_target(new_target):
 	
 func _update_label():
 	$TreasureLabel.text = LABEL_TEXT % [count, target]
+	
+func display_win():
+	$WinnerLabel.show()
