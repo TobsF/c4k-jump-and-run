@@ -25,4 +25,16 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	if not is_on_floor():
+		$AnimatedSprite2D.play("jump")
+	elif not direction:
+		$AnimatedSprite2D.play("default")
+	else:
+		$AnimatedSprite2D.play("run")
+		
+	if direction < 0:
+		$AnimatedSprite2D.flip_h = true
+	elif direction > 0:
+		$AnimatedSprite2D.flip_h = false
+
 	move_and_slide()
