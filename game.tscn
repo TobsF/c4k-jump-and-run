@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://b7lrge1e0fbai"]
+[gd_scene load_steps=8 format=4 uid="uid://b7lrge1e0fbai"]
 
 [ext_resource type="PackedScene" uid="uid://bj1hysebuxd6q" path="res://player.tscn" id="1_2au6s"]
 [ext_resource type="Script" uid="uid://bgqmf25nrykcr" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="Texture2D" uid="uid://b2rf3s2retiwc" path="res://assets/backgrounds/sheet.png" id="2_l0ylw"]
+[ext_resource type="PackedScene" uid="uid://ycx4ylqpscp8" path="res://treasure.tscn" id="4_fc0e3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e2o6t"]
 texture = ExtResource("2_l0ylw")
@@ -159,5 +160,16 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 655)
 shape = SubResource("WorldBoundaryShape2D_e2o6t")
+
+[node name="Treasures" type="Node" parent="."]
+
+[node name="Treasure" parent="Treasures" instance=ExtResource("4_fc0e3")]
+position = Vector2(38, 538)
+
+[node name="Treasure2" parent="Treasures" instance=ExtResource("4_fc0e3")]
+position = Vector2(392, 441)
+
+[node name="Treasure3" parent="Treasures" instance=ExtResource("4_fc0e3")]
+position = Vector2(728, 522)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
