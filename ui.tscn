@@ -1,17 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://doxtblnkxxoyn"]
+[gd_scene format=3 uid="uid://doxtblnkxxoyn"]
 
 [ext_resource type="Script" uid="uid://b5hmfdpqddjki" path="res://ui.gd" id="1_fyqef"]
 
-[node name="UI" type="CanvasLayer"]
+[node name="UI" type="CanvasLayer" unique_id=543674565]
 script = ExtResource("1_fyqef")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1545249813]
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 32
 text = "Treasures: 0 / 3"
 
-[node name="WinnerLabel" type="Label" parent="."]
+[node name="WinnerLabel" type="Label" parent="." unique_id=1279460997]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5

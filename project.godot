@@ -19,6 +19,10 @@ run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Events="*uid://c8smwvsdxppx4"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
